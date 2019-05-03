@@ -39,9 +39,10 @@ Lord_Pannick|PERSON
 ```
 
 To search for the vectors that are most similar to `Lord_Pannick|PERSON`, submit `Lord_Pannick|PERSON` as a search.
-![screenshot2](img/screenshot3.png)
+![screenshot3](img/screenshot3.png)
 
-You can also do very basic vector algebra searches
+You can also do very basic vector algebra searches, such as `Lord_Pannick|PERSON + judicial_review|NOUN`
+![screenshot4](img/screenshot4.png)
 
 
 
