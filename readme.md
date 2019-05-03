@@ -23,3 +23,5 @@ In the terminal run `python server.py`
 Once the vectors are loaded and the server is running the web application will listen on port `8000`.
 ## Go to the web application
 Navigtion to `localhost:8000` in your web browser
+![screenshot2](img/screenshot2.png)
+
