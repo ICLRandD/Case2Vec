@@ -14,6 +14,8 @@ The Tornado web application included in this repository is heavily based on http
 ```source env/bin/activate```
 ## Install dependencies
 ```pip3 install -r requirements.txt```
-## Decompress `common_sense_law_model_sm.txt.zip`
+## Decompress the vector file
+Decompress ``common_sense_law_model_sm.txt.zip`
 ## Run `server.py`
 In the terminal run `python server.py`
+![screenshot1](img/screenshot1.png)
