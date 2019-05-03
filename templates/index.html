@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"
+          content="A tornado based web application template used for interaction with word2vec models generated with a small sample of ICLR case law data.">
+    <meta name="author" content="ICLR&D">
+
+    <title>Case2Vec</title>
+    <link rel="icon" href="{{ static_url('img/icon.png') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="{{ static_url('css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="{{ static_url('css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+          type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+          rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{{ static_url('css/clean-blog.min.css') }}" rel="stylesheet">
+
+    <!-- Temporary navbar container fix -->
+    <style>
+        .navbar-toggler {
+            z-index: 1;
+        }
+
+        @media (max-width: 576px) {
+            nav>.container {
+                width: 100%;
+            }
+        }
+
+        #chklabel {
+            position: relative;
+            top: 5px;
+        }
+
+        #subbtn {
+            padding: 10px 20px;
+            margin: 0px;
+            border: 0px;
+            background-color: #A05CFF;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .input-group-addon {
+            padding: 0px;
+            margin: 0px;
+            border: 5px 200px;
+            width: 80px;
+        }
+
+        .hero {
+            font-family: 'Raleway', sans-serif;
+        }
+
+        #result {
+            font-family: 'Raleway', sans-serif;
+            background-color: #E6E6E6;
+        }
+
+        #history {
+            font-family: 'Raleway', sans-serif;
+            background-color: #e1e1e1;
+        }
+
+        body,
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .logo {
+            width=10%;
+            height=10%;
+        }
+
+        header.masthead {
+            margin-bottom: 50px;
+            background-image: linear-gradient(to right top, #051937, #232a4d, #3f3b63, #5d4e79, #7b618f);
+            background-attachment: scroll;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            height: 400px !important;
+        }
+
+        header.masthead .page-heading,
+        header.masthead .post-heading,
+        header.masthead .site-heading {
+            padding: 75px;
+        }
+
+        .input-group-addon {
+            margin-bottom: 0;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.25;
+            color: #464a4c;
+            text-align: center;
+            background-color: #eceeef;
+            border: 0.25px solid rgba(0, 0, 0, .15);
+            border-radius: 0;
+        }
+
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            font-family: 'Raleway', sans-serif;
+            font-size: 100%;
+            line-height: 1.15;
+            margin: 0;
+        }
+
+
+
+
+}
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- Page Header -->
+<header class="masthead" style="background-color: #000000">
+    <div class="container">
+        <img class="logo" src="https://s3-eu-west-1.amazonaws.com/iclr/assets/iclrand/sitecode.svg" alt="logo"
+             style="width: 20%"/>
+        <div class="row">
+
+            <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+
+                <div class="page-heading">
+                    <h1 class="hero">Case2Vec</h1>
+                    <span>Explore case law Word2Vec embeddings</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+            <div class="col-md-12">
+
+            </div>
+                <BR>
+            <div class="wrapper-1">
+            <div class="para-block"></div>
+                <p>Experimentation with different natural language processing techniques
+                forms a major part of the Blackstone project.</p>
+                <p>Case2Vec is machine learning experiment that investigates the degree to which we
+                can learn more about the terms used in legal documents (in this case, judgments)
+                by reference to their textual context.</p>
+
+                <div class="input-group">
+                        <span class="input-group-addon">
+                            <label id="chklabel"><input id="chkbox" type="checkbox"
+                                                        aria-label="Save search log.">LOG</label>
+                        </span>
+                    <input type="text" class="form-control" id="positive" placeholder="e.g. defamation|NOUN">
+                    <span class="input-group-addon">
+                            <button id="subbtn" type="submit" class="btn btn-danger btn-xs">GO</button>
+                        </span>
+                </div>
+            </div>
+            <div id="result"></div>
+            <BR>
+            <BR>
+            <div id="pre_history"></div>
+            <div id="history"></div>
+            <BR>
+            <BR>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+                <p class="copyright text-muted">ICLR&D</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="{{ static_url('js/jquery.min.js') }}"></script>
+<script src="{{ static_url('js/tether.min.js') }}"></script>
+<script src="{{ static_url('js/bootstrap.min.js') }}"></script>
+
+
+<!-- Custom scripts for this template -->
+<script src="{{ static_url('js/clean-blog.min.js') }}"></script>
+<script src="{{ static_url('js/ajaxclient.js') }}"></script>
+
+</body>
+
+</html>

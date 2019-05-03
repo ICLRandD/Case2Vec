@@ -1,0 +1,5 @@
+{
+  "model": "common_sense_law_model_sm.txt",
+  "fasttext": true,
+  "debug": true
+}
