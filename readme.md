@@ -38,5 +38,8 @@ United_Kingdom|GPE
 Lord_Pannick|PERSON
 ```
 
+To search for the vectors that are most similar to `Lord_Pannick|PERSON`, submit `Lord_Pannick|PERSON` as a search.
+![screenshot2](img/screenshot3.png)
+
 
 
