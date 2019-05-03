@@ -17,6 +17,16 @@ Sample sentence following preprocessing:
 
 3. This output was then fed into Gensim's Word2Vec implementation to generate the word embeddings.
 
+## Limitations
+
+This work is still very much in its infancy and is very much in the experimental stage. Please be aware of the following limitiations with the model as it currently stands:
+
+* The training corpus is tiny (we plan to repeat the exercise with a larger training corpus soon). 
+* Extremes have not been removed in from the corpus, such as standard stop-words. This decision was taken to give the Sense2Vec extraction sentences that could be accuracy predicted on with the spaCy model. 
+* The hyper-parameters used to train the Word2Vec model have not been optimised. 
+
+This is just a very small draft proof of concept.
+
 # Credit and acknowledgment
 
 The Tornado web application included in this repository is heavily based on https://github.com/superkerokero/word2vec-search-app. Only minor modifications were made to the original codebase, including minor changes to `server.py`, `index.html` and `ajaxclient.js`. As such, we are very grateful to https://github.com/superkerokero for making the code available. 
