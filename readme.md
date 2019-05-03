@@ -26,5 +26,17 @@ Navigtion to `localhost:8000` in your web browser
 
 # Searching the vectors
 Rather than training the vectors on the tokens in the corpus, we first processed the corpus with
-https://github.com/explosion/sense2vec/blob/master/bin/preprocess.py  
+https://github.com/explosion/sense2vec/blob/master/bin/preprocess.py. This stage processed the corpus using spaCy's `en_core_web_lg` model which appended semantic identifiers to the tokens in the corpus. The advantage of this preprocessing step was that the raw word tokens were converted into more meaningful tokens to feed forward into the Word2Vec model.
+
+For example,
+* the tokens `judicial` and `review` were identified as a phrase and tagged as a `NOUN`
+* the tokens `United` and `Kingdom` were recognised as a phrase and were tagged as geopolitical entity by the spaCy model.
+* the tokens `Lord` and `Pannick` were recognised as a phrase and were tagged as a person.
+```
+judicial_review|NOUN
+United_Kingdom|GPE
+Lord_Pannick|PERSON
+```
+
+
 
