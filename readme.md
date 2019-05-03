@@ -23,7 +23,7 @@ Sample sentence following preprocessing:
 This work is still very much in its infancy and is very much in the experimental stage. Please be aware of the following limitiations with the model as it currently stands:
 
 * The training corpus is tiny (we plan to repeat the exercise with a larger training corpus soon). 
-* Extremes have not been removed in from the corpus, such as standard stop-words. This decision was taken to give the Sense2Vec extraction sentences that could be accuracy predicted on with the spaCy model. 
+* Extremes have not been removed in from the corpus, such as standard stop-words. This decision was taken to give the Sense2Vec extraction sentences that could be accurately predicted on with the spaCy model. 
 * The hyper-parameters used to train the Word2Vec model have not been optimised. 
 
 This is just a very small draft proof of concept.
