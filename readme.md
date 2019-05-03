@@ -1,6 +1,6 @@
 # Case2Vec
 
-A simple web application for searching Word2Vec embeddings derived from approximately 2,000 law reports published by the The Incorporated Council of Law Reporting for England & Wales (https://www.iclr.co.uk).
+A simple web application for searching Word2Vec embeddings derived from approximately 2,000 law reports published by The Incorporated Council of Law Reporting for England & Wales (https://www.iclr.co.uk).
 
 ## Credit and acknowledgment
 
