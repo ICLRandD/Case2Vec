@@ -14,6 +14,7 @@ This experiment used a comparatively small trainign corpus composed of a collect
 Sample sentence following preprocessing:
 
 ```The|DET claimant|NOUN further|ADV alleges|VERB that|ADP the|DET journals|NOUN are|VERB original_literary_works|NOUN within|ADP the|DET meaning|NOUN of|ADP the|DET Copyright|PROPN Designs|PROPN and|CCONJ Patents|PROPN Act|PROPN that|DET copyright|NOUN in|ADP them|PRON belongs|VERB to|ADP himself|PRON as|ADP their|DET author|NOUN and|CCONJ that|ADP by|ADP reproducing|VERB extracts|NOUN from|ADP the|DET Hong_Kong_journal|NOUN in|ADP the|DET November_edition|NOUN and|CCONJ by|ADP copying|VERB and|CCONJ continuing|VERB in|ADP possession|NOUN of|ADP all|DET eight|CARDINAL journals|NOUN in|ADP the|DET course|NOUN of|ADP its|DET business|NOUN knowing|VERB or|CCONJ having|VERB reason|NOUN to|PART believe|VERB that|ADP they|PRON are|VERB infringing|VERB copies|NOUN of|ADP copyright|NOUN works|VERB the|DET defendant|NOUN has|VERB infringed|VERB his|DET copyright|NOUN in|ADP them|PRON```
+
 3. This output was then fed into Gensim's Word2Vec implementation to generate the word embeddings.
 
 # Credit and acknowledgment
