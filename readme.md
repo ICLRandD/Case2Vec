@@ -15,7 +15,11 @@ The Tornado web application included in this repository is heavily based on http
 ## Install dependencies
 ```pip3 install -r requirements.txt```
 ## Decompress the vector file
-Decompress ``common_sense_law_model_sm.txt.zip`
-## Run `server.py`
+Decompress `common_sense_law_model_sm.txt.zip`
+## Start the server
+At the command line run `python server.py`
 In the terminal run `python server.py`
 ![screenshot1](img/screenshot1.png)
+Once the vectors are loaded and the server is running the web application will listen on port `8000`.
+## Go to the web application
+Navigtion to `localhost:8000` in your web browser
