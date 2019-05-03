@@ -24,3 +24,7 @@ Once the vectors are loaded and the server is running the web application will l
 Navigtion to `localhost:8000` in your web browser
 ![screenshot2](img/screenshot2.png)
 
+# Searching the vectors
+Rather than training the vectors on the tokens in the corpus, we first processed the corpus with
+https://github.com/explosion/sense2vec/blob/master/bin/preprocess.py  
+
