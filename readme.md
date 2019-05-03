@@ -5,12 +5,12 @@ A simple web application for searching Word2Vec embeddings derived from approxim
 
 ## The data
 
-This experiment used a comparatively small trainign corpus composed of a collection of sentences extracted from about 2,000 law reports published by ICLR. 
+This experiment used a comparatively small training corpus composed of a collection of sentences extracted from about 2,000 law reports published by ICLR. 
 
 ## The training process
 
 1. Extract sentences from the original reports using spaCy's sentence segmenter and write to disk in a text file with a sentence on each line.
-2. Process that file using https://github.com/explosion/sense2vec/blob/master/bin/preprocess.py to convert build a vocabularly with Part-of-Speech and Named Entity tags appended to each token. This stage yielded the following output for each sentence in the corpus:
+2. Process that file using https://github.com/explosion/sense2vec/blob/master/bin/preprocess.py to build a vocabularly with Part-of-Speech and Named Entity tags appended to each token. This stage yielded the following output for each sentence in the corpus:
 Sample sentence following preprocessing:
 
 ```The|DET claimant|NOUN further|ADV alleges|VERB that|ADP the|DET journals|NOUN are|VERB original_literary_works|NOUN within|ADP the|DET meaning|NOUN of|ADP the|DET Copyright|PROPN Designs|PROPN and|CCONJ Patents|PROPN Act|PROPN that|DET copyright|NOUN in|ADP them|PRON belongs|VERB to|ADP himself|PRON as|ADP their|DET author|NOUN and|CCONJ that|ADP by|ADP reproducing|VERB extracts|NOUN from|ADP the|DET Hong_Kong_journal|NOUN in|ADP the|DET November_edition|NOUN and|CCONJ by|ADP copying|VERB and|CCONJ continuing|VERB in|ADP possession|NOUN of|ADP all|DET eight|CARDINAL journals|NOUN in|ADP the|DET course|NOUN of|ADP its|DET business|NOUN knowing|VERB or|CCONJ having|VERB reason|NOUN to|PART believe|VERB that|ADP they|PRON are|VERB infringing|VERB copies|NOUN of|ADP copyright|NOUN works|VERB the|DET defendant|NOUN has|VERB infringed|VERB his|DET copyright|NOUN in|ADP them|PRON```
@@ -53,8 +53,8 @@ United_Kingdom|GPE
 Lord_Pannick|PERSON
 ```
 
-To search for the vectors that are most similar to `Lord_Pannick|PERSON`, submit `Lord_Pannick|PERSON` as a search.
-![screenshot3](img/screenshot3.png)
+To search for the vectors that are most similar to `Lord_Pannick|PERSON`, submit `Lord_Pannick|PERSON` as a search. What's interesting here is the vectors reveal that Lord Pannick QC shares proximity in vector space with other barristers of similar standing.
+![screenshot3](img/screenshot3.png) 
 
 You can also do very basic vector algebra searches, such as `Lord_Pannick|PERSON + judicial_review|NOUN`
 ![screenshot4](img/screenshot4.png)
